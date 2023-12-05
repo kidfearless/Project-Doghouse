@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+      <ProjectReference Include="..\AnalyzerWCodeFix.CodeFixes\AnalyzerWCodeFix.CodeFixes.csproj">
+          <OutputItemType>Analyzer</OutputItemType>
+          <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      </ProjectReference>
+        <!--add as code analyzer-->
+
+      <ProjectReference Include="..\AnalyzerWCodeFix\AnalyzerWCodeFix.csproj">
+<OutputItemType>Analyzer</OutputItemType>
+        <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      </ProjectReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\Users\pol\source\repos\AnalyzerWCodeFix\ConsoleApp1\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\pol\source\repos\AnalyzerWCodeFix\ConsoleApp1\.editorconfig" />
+  </ItemGroup>
+
+</Project>
